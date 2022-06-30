@@ -17,6 +17,7 @@ ul {
   --initialWhite: #fff;
   --initialPurple: #b400d1;
   --initialblack: #000;
+  --initialYellow: #FDCA04;
 }
 body {
   font-family: 'Open Sans', sans-serif;
@@ -36,6 +37,7 @@ h2{
   font-size: 1.6rem;
   font-weight: bold;
   color: #999;
+  background-color: transparent;
   transition-duration: 300ms;
 }
 .button:hover{
@@ -46,6 +48,27 @@ h2{
   background-color: var(--initialPurple);
   width: 16.8rem;
   height: 2.2rem;
+  animation-name: color;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-duration: 60s;
+}
+@keyframes color {
+  0%{
+    background-color: var(--initialPurple);
+  }
+  25%{
+    background-color: var(--initialYellow);
+  }
+  50%{
+    background-color: var(--initialPurple);
+  }
+  75%{
+    background-color: var(--initialYellow);
+  }
+  100%{
+    background-color: var(--initialPurple);
+  }
 }
 .container {
   max-width: 114rem;
@@ -136,8 +159,9 @@ header .header--menu img {
   cursor: pointer;
 }
 section.banner {
-  background-image: url('../images/bg1.jpg');
+  background-image: url('https://images.pexels.com/photos/6642541/pexels-photo-6642541.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
   background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
   padding: 9rem 0;
@@ -193,7 +217,89 @@ section.area1 .area1--img1 {
   height: 55rem;
 }
 section.area1 .area1--img2 {
-  background-image: url('..//images/ajax-front.jpeg');
+  background-image: url('../images/ajax-front.jpeg');
   grid-column: 2/3;
   grid-row: 1/3;
+}
+
+section.area2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+section.area2 .area2--content {
+  padding: 8rem;
+}
+section.area2 .area2--quote{
+  margin-bottom: 3rem;
+  font-size: 1.6rem;
+}
+section.area2 .area2--text{
+  margin-bottom: 6rem;
+  font-size: 1.6rem;
+}
+section.area2 .area2--img1 {
+  background-image: url('../images/fcp-zoom.jpeg');
+  background-size: cover;
+  background-position: center;
+  height: 55rem;
+}
+section.area2 .area2--img2 {
+  background-image: url('../images/fcp-front.jpeg');
+  grid-column: 1/2;
+  grid-row: 1/3;
+}
+
+section.area3 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  height: 75rem;
+}
+section.area3 button{
+  margin-top: 1rem;
+  color: var(--initialWhite);
+  border: 2px solid var(--initialWhite);
+}
+section.area3 button:hover{
+  background-color: white;
+  color: var(--initialblack);
+}
+section.area3 .area3--content {
+  padding: 8rem;
+  background-image: url('https://images.pexels.com/photos/274506/pexels-photo-274506.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+  background-size: cover;
+  background-position: left;
+}
+
+section.area3 .area3--text{
+  margin-bottom: 8rem;
+  margin-top: 7rem;
+  font-size: 1.6rem;
+  text-shadow: 1px 1px 1px var(--initialWhite);
+  max-width: 300px;
+}
+section.area3 .area3--img1 {
+  background-image: url('../images/ohomi.jpg');
+  background-size: cover;
+  background-position: center;
+}
+section.area4{
+  grid-template-columns: repeat(2, 1fr);
+  display: grid;
+  height: 40vh;
+}
+section.area4 .area4--img1{
+  background-image: url('../images/a-marca-que.jpg');
+  background-size: cover;
+  background-position: center;
+}
+section.area4 .area4--img2{
+  background-image: url('../images/voce-veste.jpg');
+  background-size: cover;
+  background-position: center;
+}
+footer{
+    background-color: #333;
+    text-align: center;
+    padding: 8rem;
+    color: var(--initialWhite);
 }
