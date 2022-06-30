@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Open+Sans:ital@0;1&family=Oswald:wght@400;700&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  border: none;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+:root {
+  font-size: 62.5%;
+  --initialWhite: #fff;
+  --initialPurple: #b400d1;
+  --initialblack: #000;
+}
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+h2{
+  font-family: 'Oswald', sans-serif;
+  font-weight: bold;
+  font-size: 35px;
+  line-height: 45px;
+  margin: 20px 0;
+}
+.button{
+  border: .2rem solid #999;
+  display: inline-block;
+  padding: 1rem 3rem;
+  border-radius: .3rem;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #999;
+  transition-duration: 300ms;
+}
+.button:hover{
+  background-color: #999;
+  color: var(--initialWhite);
+}
+.bar{
+  background-color: var(--initialPurple);
+  width: 16.8rem;
+  height: 2.2rem;
+}
+.container {
+  max-width: 114rem;
+  margin: auto;
+}
+header {
+  background-color: var(--initialWhite);
+}
+header .line {
+  background-color: var(--initialPurple);
+  height: 1.5rem;
+}
+header .header--area {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  height: 10rem;
+}
+header .header--left img {
+  width: 8rem;
+  border-radius: 50%;
+  animation-name: gira;
+  animation-duration: 2s;
+  animation-delay: 400ms;
+  animation-timing-function: linear;
+  transform: rotate(0deg);
+}
+@keyframes gira {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(180deg);
+  }
+  50% {
+    transform: rotate(360deg);
+  }
+  75% {
+    transform: rotate(540deg);
+    width: 8rem;
+  }
+  90% {
+    width: 9.5rem;
+  }
+  100% {
+    width: 8rem;
+    transform: rotate(720deg);
+  }
+}
+header .header--right {
+  display: flex;
+  align-items: center;
+}
+header .header--search form {
+  display: flex;
+}
+header .header--search input {
+  background-color: var(--initialWhite);
+  font-size: 1.6rem;
+  padding: 1rem 1rem;
+  border: 0.1rem solid #999;
+  outline: 0;
+  width: 100%;
+  max-width: 22rem;
+  font-size: 2rem;
+  padding-right: 3.5rem;
+  transition-duration: 500ms;
+}
+header .header--search input:focus {
+  border-radius: 1rem;
+  background: linear-gradient(to right, #000 75%, var(--initialWhite));
+  border: 1px solid #000;
+  color: var(--initialWhite);
+}
+header .header--search button {
+  background-color: transparent;
+  margin-left: -3rem;
+}
+header .header--search button img {
+  width: 1.6rem;
+  cursor: pointer;
+}
+header .header--menu {
+  margin-left: 5rem;
+}
+header .header--menu img {
+  width: 3rem;
+  cursor: pointer;
+}
+section.banner {
+  background-image: url('../images/bg1.jpg');
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  padding: 9rem 0;
+}
+section.banner h1 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 9rem;
+  font-weight: bold;
+  line-height: 5rem;
+  color: var(--initialPurple);
+}
+section.banner h1 span.upperName {
+  font-size: 4.5rem;
+  color: #fdca04;
+}
+section.banner p {
+  margin-top: 5rem;
+  color: var(--initialWhite);
+  font-size: 1.6rem;
+  margin-bottom: 8rem;
+}
+section.banner .banner--images img {
+  width: 14.8rem;
+  border: 2px solid var(--initialPurple);
+  border-radius: 50%;
+  margin-right: 4rem;
+  cursor: pointer;
+  transition-duration: 1s;
+}
+section.banner .banner--images img:hover {
+  background-color: var(--initialPurple);
+}
+
+section.area1 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+section.area1 .area1--content {
+  padding: 8rem;
+}
+section.area1 .area1--quote{
+  margin-bottom: 3rem;
+  font-size: 1.6rem;
+}
+section.area1 .area1--text{
+  margin-bottom: 6rem;
+  font-size: 1.6rem;
+}
+section.area1 .area1--img1 {
+  background-image: url('../images/ajax-front-zoom2.jpeg');
+  background-size: cover;
+  background-position: center;
+  height: 55rem;
+}
+section.area1 .area1--img2 {
+  background-image: url('..//images/ajax-front.jpeg');
+  grid-column: 2/3;
+  grid-row: 1/3;
+}
