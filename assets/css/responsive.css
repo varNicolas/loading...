@@ -46,8 +46,6 @@
   section.area3 .area3--img1{
     display: none;
   }
-  section.area4{
-  }
 }
 @media (max-width:666px) {
   header .header--right ul{
@@ -60,7 +58,7 @@
   }
   
   section.area4{
-    height: 35vh;
+    height: 55vh;
   }
   section.area4 .area4--img2{
     background-image: url(../images/voce-veste-mobile.jpg);
@@ -93,6 +91,6 @@
     width: 7rem;
   }
   section.area4{
-    height: 25vh;
+    height: 35vh;
   }
 }
