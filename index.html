@@ -4,6 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="assets/images/favicon.png"
+      type="image/x-icon"
+    />
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/responsive.css" />
     <title>StarBucks</title>
@@ -13,38 +18,50 @@
       <div class="line"></div>
       <div class="container header--area">
         <div class="header--left">
-          <a href="#header"
+          <a href="#fullTop"
             ><img src="assets/images/logo.jpg" alt="Logo do site"
           /></a>
         </div>
         <div class="header--right">
           <ul>
-            <li><a href=""><span>Início</span></a></li>
-            <li><a href=""><span>Sobre</span></a></li>
-            <li><a href=""><span>Contato</span></a></li>
             <li>
-              <a target="_blank" href="https://wa.me/555184745129" 
-                ><i id="whatsapp" class="fa-brands fa-whatsapp"></i
-              ></a>
+              <a href="#start"><span>Início</span></a>
             </li>
             <li>
-              <a target="_blank" href="https://www.instagram.com/slumsports_/"
-                ><i id="instagram" class="fa-brands fa-instagram"></i
-              ></a>
+              <a href="#about"><span>Sobre</span></a>
             </li>
             <li>
-              <a target="_blank" href="http://"
-                ><i id="twitter" class="fa-brands fa-twitter"></i
-              ></a>
+              <a href="#contact"><span>Contato</span></a>
             </li>
           </ul>
-          <div class="header--menu">
-            <img src="assets/images/menu.png" alt="" />
+          <div onclick="openMenu()" id="closedMenu" class="header--menu">
+            <div class="areaButton">
+              <div class="lineButton"></div>
+              <div class="lineButton"></div>
+              <div class="lineButton"></div>
+            </div>
           </div>
+          <aside id="menu--opener">
+            <ul>
+              <div onclick="closeMenu()" class="areaButtonClose">
+                <div class="lineButtonClose1"></div>
+                <div class="lineButtonClose2"></div>
+              </div>
+              <li>
+                <a  onclick="closeMenu()" href="#start"><span>Início</span></a>
+              </li>
+              <li>
+                <a  onclick="closeMenu()" href="#about"><span>Sobre</span></a>
+              </li>
+              <li>
+                <a  onclick="closeMenu()" href="#contact"><span>Contato</span></a>
+              </li>
+            </ul>
+          </aside>
         </div>
       </div>
     </header>
-    <section class="banner">
+    <section id="fullTop" class="banner">
       <div class="container">
         <h1>
           Slum®
@@ -57,12 +74,12 @@
         </p>
         <div class="banner--images">
           <img src="assets/images/brasil-front-removebg-preview.png" alt="" />
-          <img src="assets/images/brasil-zoom.jpeg" alt="" />
+          <img id="zoom" src="assets/images/brasil-zoom.jpeg" alt="" />
           <img src="assets/images/brasil-back-removebg-preview.png" alt="" />
         </div>
       </div>
     </section>
-    <section class="area1">
+    <section id="start" class="area1">
       <div class="area1--content">
         <div class="bar"></div>
         <h2>
@@ -79,12 +96,12 @@
 
         <p class="area1--text">
           Chorão e SlumSports compartilham uma missão: construir um mundo mais
-          gentil e corajoso. Através da Born This Way Foundation, Lady Gaga
+          gentil e corajoso. Através da Born This Way Foundation, Chorão
           inspirou seus fãs a abraçar a bondade em suas comunidades – online e
           no mundo. Com sua ajuda, podemos capacitar os jovens a espalhar mais
           bondade.
         </p>
-        <a href="" class="button">Leia mais</a>
+        <!-- <a href="" class="button">Leia mais</a> -->
       </div>
 
       <div class="area1--img1"></div>
@@ -100,26 +117,33 @@
 
         <p class="area2--text">
           Chorão e SlumSports compartilham uma missão: construir um mundo mais
-          gentil e corajoso. Através da Born This Way Foundation, Lady Gaga
+          gentil e corajoso. Através da Born This Way Foundation, Chorão
           inspirou seus fãs a abraçar a bondade em suas comunidades – online e
           no mundo. Com sua ajuda, podemos capacitar os jovens a espalhar mais
           bondade.
         </p>
-        <a href="" class="button">Leia mais</a>
+        <!-- <a href="" class="button">Leia mais</a> -->
       </div>
 
       <div class="area2--img1"></div>
       <div class="area2--img2"></div>
     </section>
-    <section class="area3">
+    <section id="about" class="area3">
       <div class="area3--content">
         <div class="bar"></div>
         <h2>The New Uktra Caramel <br />Frappuccino Is Here</h2>
         <p class="area3--text">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos tempora
-          illum sit fuga similique unde tenetur quo ipsam odit totam.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
+          laboriosam doloribus sint, repellat eum nisi incidunt velit mollitia
+          sapiente fugiat. Est debitis dolorum doloremque quis quas voluptas
+          autem libero. Quos labore fugiat vero temporibus recusandae reiciendis
+          dolor officia quisquam iusto vel quaerat natus repudiandae dicta modi
+          odit, repellat nesciunt odio aspernatur eligendi tempora inventore.
+          Doloribus molestiae excepturi nihil aut praesentium repudiandae
+          cupiditate, autem neque magnam fugit reprehenderit optio perspiciatis
+          nesciunt nemo eius consequatur sed suscipit.
         </p>
-        <button class="button">Leia mais</button>
+        <!-- <button class="button">Leia mais</button> -->
       </div>
       <div class="area3--img1">...</div>
     </section>
@@ -127,16 +151,30 @@
       <div class="area4--img1"></div>
       <div class="area4--img2"></div>
     </section>
-    <footer>
-      <p>
-        Colocal algo aqui é us guri UUUUUUUUUUUUUUUUIIIIIIIIII <br />
-        ELLLIIIIIII GOXXXXXXXXXXTAAAAAAAAAAA
-      </p>
+    <footer id="contact">
+      <ul>
+        <li>
+          <a target="_blank" href="https://wa.me/555184745129"
+            ><i id="whatsapp" class="fa-brands fa-whatsapp"></i
+          ></a>
+        </li>
+        <li>
+          <a target="_blank" href="https://www.instagram.com/slumsports_/"
+            ><i id="instagram" class="fa-brands fa-instagram"></i
+          ></a>
+        </li>
+        <li>
+          <a target="_blank" href="http://"
+            ><i id="twitter" class="fa-brands fa-twitter"></i
+          ></a>
+        </li>
+      </ul>
     </footer>
 
     <script
       src="https://kit.fontawesome.com/080f62d850.js"
       crossorigin="anonymous"
     ></script>
+    <script src="assets/scripts/script.js"></script>
   </body>
 </html>

@@ -6,6 +6,10 @@
   box-sizing: border-box;
   border: none;
 }
+
+html {
+  scroll-behavior: smooth;
+}
 a {
   text-decoration: none;
 }
@@ -14,22 +18,22 @@ ul {
 }
 :root {
   font-size: 62.5%;
-  --initialWhite: #fff;
+  --initialWhite: #000;
   --initialPurple: #b400d1;
-  --initialblack: #000;
-  --initialYellow: #FDCA04;
+  --initialblack: #fff;
+  --initialYellow: #fdca04;
 }
 body {
   font-family: 'Open Sans', sans-serif;
 }
-h2{
+h2 {
   font-family: 'Oswald', sans-serif;
   font-weight: bold;
   font-size: 35px;
   line-height: 45px;
   margin: 20px 0;
 }
-.button{
+/* .button{
   border: .2rem solid #999;
   display: inline-block;
   padding: 1rem 3rem;
@@ -43,8 +47,8 @@ h2{
 .button:hover{
   background-color: #999;
   color: var(--initialWhite);
-}
-.bar{
+} */
+.bar {
   background-color: var(--initialPurple);
   width: 16.8rem;
   height: 2.2rem;
@@ -54,19 +58,19 @@ h2{
   animation-duration: 60s;
 }
 @keyframes color {
-  0%{
+  0% {
     background-color: var(--initialPurple);
   }
-  25%{
+  25% {
     background-color: var(--initialYellow);
   }
-  50%{
+  50% {
     background-color: var(--initialPurple);
   }
-  75%{
+  75% {
     background-color: var(--initialYellow);
   }
-  100%{
+  100% {
     background-color: var(--initialPurple);
   }
 }
@@ -113,6 +117,12 @@ header .header--left img {
   90% {
     width: 9.5rem;
   }
+  95% {
+    width: 9rem;
+  }
+  97% {
+    width: 8.5rem;
+  }
   100% {
     width: 8rem;
     transform: rotate(720deg);
@@ -122,39 +132,80 @@ header .header--right {
   display: flex;
   align-items: center;
 }
-header .header--right ul{
+header .header--right ul {
   display: flex;
   gap: 3rem;
   font-size: 2rem;
 }
-header .header--right ul li a, header .header--right ul li a span{
-  color: black;
+header .header--right ul li a,
+header .header--right ul li a span {
+  color: var(--initialblack);
   transition-duration: 200ms;
 }
-header .header--right ul li a span:hover{
-  opacity: .9;
+header .header--right ul li a span:hover {
+  opacity: 0.9;
   color: var(--initialYellow);
   border-bottom: 1px solid var(--initialYellow);
 }
-header .header--right ul li i{
-  font-size: 2.5rem;
+
+header .header--right #menu--opener {
+  width: 40vw;
+  height: 100vh;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.712);
+  padding: 15rem 0 10rem 0;
+  display: none;
+  top: 0;
+  right: 0;
 }
-header .header--right ul li #whatsapp,
-header .header--right ul li #twitter,
-header .header--right ul li #instagram{
-  transition-duration: 200ms;
+.areaButtonClose {
+  width: 4.5rem;
+  height: 3.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: absolute;
+  right: 4.5rem;
+  top: 5rem;
+  margin-left: 6.2rem;
 }
-header .header--right ul li #whatsapp:hover{
-  color: #38BD48;
+.areaButtonClose .lineButtonClose1 {
+  transform: rotate(45deg);
+  position: absolute;
+  top: 1.3rem;
+  background-color: var(--initialblack);
+  height: 0.4rem;
+  width: 100%;
 }
-header .header--right ul li #instagram:hover{
-  color: #FF0064;
+.areaButtonClose .lineButtonClose2 {
+  transform: rotate(-45deg);
+  position: absolute;
+  top: 1.3rem;
+  background-color: var(--initialblack);
+  height: 0.4rem;
+  width: 100%;
 }
-header .header--right ul li #twitter:hover{
-  color: #43BDF0;
+header .header--right #menu--opener ul {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+  align-items: center;
 }
 header .header--menu {
-  margin-left: 5rem;
+  display: none;
+}
+header .header--menu .areaButton {
+  width: 4.5rem;
+  height: 3.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+header .header--menu .areaButton .lineButton {
+  height: 0.4rem;
+  width: 100%;
+  background-color: var(--initialblack);
 }
 header .header--menu img {
   display: none;
@@ -178,11 +229,11 @@ section.banner h1 {
 }
 section.banner h1 span.upperName {
   font-size: 4.5rem;
-  color: #fdca04;
+  color: var(--initialYellow);
 }
 section.banner p {
   margin-top: 5rem;
-  color: var(--initialWhite);
+  color: var(--initialblack);
   font-size: 1.6rem;
   margin-bottom: 8rem;
 }
@@ -201,15 +252,17 @@ section.banner .banner--images img:hover {
 section.area1 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  background-color: var(--initialWhite);
+  color: var(--initialblack);
 }
 section.area1 .area1--content {
   padding: 8rem;
 }
-section.area1 .area1--quote{
+section.area1 .area1--quote {
   margin-bottom: 3rem;
   font-size: 1.6rem;
 }
-section.area1 .area1--text{
+section.area1 .area1--text {
   margin-bottom: 6rem;
   font-size: 1.6rem;
 }
@@ -228,15 +281,17 @@ section.area1 .area1--img2 {
 section.area2 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  background-color: var(--initialWhite);
+  color: var(--initialblack);
 }
 section.area2 .area2--content {
   padding: 8rem;
 }
-section.area2 .area2--quote{
+section.area2 .area2--quote {
   margin-bottom: 3rem;
   font-size: 1.6rem;
 }
-section.area2 .area2--text{
+section.area2 .area2--text {
   margin-bottom: 6rem;
   font-size: 1.6rem;
 }
@@ -256,16 +311,17 @@ section.area3 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   height: 75rem;
+  color: var(--initialblack);
 }
-section.area3 button{
+/* section.area3 button{
   margin-top: 1rem;
-  color: var(--initialWhite);
-  border: 2px solid var(--initialWhite);
+  color: var(--initialblack);
+  border: 2px solid var(--initialblack);
 }
 section.area3 button:hover{
   background-color: white;
-  color: var(--initialblack);
-}
+  color: var(--initialWhite);
+} */
 section.area3 .area3--content {
   padding: 8rem;
   background-image: url('https://images.pexels.com/photos/274506/pexels-photo-274506.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
@@ -273,11 +329,10 @@ section.area3 .area3--content {
   background-position: left;
 }
 
-section.area3 .area3--text{
+section.area3 .area3--text {
   margin-bottom: 8rem;
   margin-top: 7rem;
   font-size: 1.6rem;
-  text-shadow: 1px 1px 1px var(--initialWhite);
   max-width: 300px;
 }
 section.area3 .area3--img1 {
@@ -285,25 +340,48 @@ section.area3 .area3--img1 {
   background-size: cover;
   background-position: center;
 }
-section.area4{
+section.area4 {
   grid-template-columns: repeat(2, 1fr);
   display: grid;
   height: 40vh;
 }
-section.area4 .area4--img1{
+section.area4 .area4--img1 {
   background-image: url('../images/a-marca-que.jpg');
   background-size: cover;
   background-position: center;
-
 }
-section.area4 .area4--img2{
+section.area4 .area4--img2 {
   background-image: url('../images/voce-veste.jpg');
   background-size: cover;
   background-position: center;
 }
-footer{
-    background-color: #333;
-    text-align: center;
-    padding: 8rem;
-    color: var(--initialWhite);
+footer {
+  background-color: var(--initialWhite);
+  text-align: center;
+  padding: 8rem;
+  color: var(--initialblack);
+}
+
+footer ul {
+  display: flex;
+  gap: 3rem;
+  font-size: 2rem;
+  justify-content: center;
+}
+footer ul li a {
+  color: var(--initialblack);
+}
+footer ul li #whatsapp,
+footer ul li #twitter,
+footer ul li #instagram {
+  transition-duration: 200ms;
+}
+footer ul li #whatsapp:hover {
+  color: #38bd48;
+}
+footer ul li #instagram:hover {
+  color: #ff0064;
+}
+footer ul li #twitter:hover {
+  color: #43bdf0;
 }

@@ -51,7 +51,7 @@
   header .header--right ul{
     display: none;
   }
-  header .header--menu img{
+  header .header--menu{
     display: inline-block;
     margin-right: 3rem;
     width: 4rem;
@@ -82,6 +82,9 @@
   header .header--left img{
     width: 6rem;
   }
+  :root{
+    font-size: 55%;
+  }
 }
 @media (max-width: 444px) {
   section.banner p{
@@ -91,6 +94,46 @@
     width: 7rem;
   }
   section.area4{
-    height: 35vh;
+    height: 40vh;
   }
+  section.area1 .area1--content{
+    padding-left: 10px;
+    padding-right: 25px;
+  }
+  section.area2 .area2--content{
+    padding-left: 10px;
+    padding-right: 25px;
+  }
+  section.area3 .area3--content{
+    padding-left: 10px;
+    padding-right: 25px
+  }
+  section.banner h1{
+    font-size: 8rem;
+  }
+  section.area1 .area1--img1{
+    height: 40rem;
+  }
+  section.area2 .area2--img1{
+    height: 40rem;
+  }
+}
+@media (max-width:340px) {
+  section.banner .banner--images img#zoom{
+    display: none;
+  }
+}
+@media (max-width:260px) {
+  section.banner h1{
+    font-size: 6rem;
+  }
+  section.banner p {
+    font-size: 1rem;
+}
+section.area1 .area1--img1{
+  height: 30rem;
+}
+section.area2 .area2--img1{
+  height: 30rem;
+}
 }
